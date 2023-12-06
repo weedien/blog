@@ -124,9 +124,9 @@ enableEmoji = true
   # ["sticky", "normal", "auto"]
   mobileMode = "auto"
   [params.header.title]
-    logo = ""
+    logo = "/trees.svg"
     name = "旷野之森"
-    pre = "<i class='fa-solid fa-tree'></i>"
+    # pre = "<i class='fa-solid fa-tree'></i>"
     post = ""
     typeit = false
   [params.header.subtitle]
