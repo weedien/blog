@@ -2,3 +2,8 @@
 
 resources/
 public/
+
+# 只提交当前使用的主题
+themes/LoveIt/
+themes/PaperMod/
+themes/next/
