@@ -1,6 +1,6 @@
 baseURL = 'https://weedien.cn/'
 title = '旷野之原'
-theme = 'FixIt'
+theme = 'LoveIt'
 
 defaultContentLanguage = "zh-cn"
 languageCode = "zh-CN"
@@ -376,17 +376,17 @@ darkTheme = "github-dark"
 [params.page.comment.giscus]
 # 你可以参考官方文档来使用下列配置
 enable = true
-repo = ""
-repoId = ""
+repo = "weedien/blog"
+repoId = "R_kgDOK2XWaA"
 category = "Announcements"
-categoryId = ""
+categoryId = "DIC_kwDOK2XWaM4Cbia5"
 # 为空时自动适配当前主题 i18n 配置
-lang = ""
+lang = "zh-CN"
 mapping = "pathname"
 reactionsEnabled = "1"
 emitMetadata = "0"
 inputPosition = "bottom"
-lazyLoading = false
+lazyLoading = true
 lightTheme = "light"
 darkTheme = "dark"
 # Third-party library config
