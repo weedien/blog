@@ -1,0 +1,427 @@
+# -------------------------------------------------------------------------------------
+# Theme Core Configuration | 主题核心配置
+# See: https://fixit.lruihao.cn/documentation/basics/#theme-configuration
+# -------------------------------------------------------------------------------------
+
+version = "0.2.X" # e.g. "0.2.X", "0.2.15", "v0.2.15" etc.
+# site description
+description  = "weedien的个人网站"
+keywords     = [ "weedien" ]
+defaultTheme = "auto"
+gitRepo      = "https://github.com/weedien/blog"
+# ["sha256", "sha384", "sha512", "md5"]
+fingerprint        = ""
+dateFormat         = "2006-01-02"
+images             = [  ]
+enablePWA          = false
+externalIcon       = false
+disableThemeInject = false
+
+[author]
+  name   = "weedien"
+  avatar = '/images/avatar.png'
+  link   = 'https://github.com/weedien'
+  email  = "weedien@qq.com"
+
+[app]
+  title      = "旷野之森"
+  noFavicon  = false
+  svgFavicon = ""
+  iconColor  = "#5bbad5"
+  tileColor  = "#da532c"
+  [app.themeColor]
+    light = "#f8f8f8"
+    dark  = "#252627"
+
+[search]
+  enable          = true
+  type            = "algolia"
+  contentLength   = 4000
+  placeholder     = ""
+  maxResultLength = 10
+  snippetLength   = 30
+  highlightTag    = "em"
+  absoluteURL     = false
+  [search.algolia]
+    index     = "weblog"
+    appID     = "A0JPQ9EYLU"
+    searchKey = "5f0c6e179363e5bd7cf787dd23989cc9"
+
+[header]
+  # ["sticky", "normal", "auto"]
+  desktopMode = "sticky"
+  # ["sticky", "normal", "auto"]
+  mobileMode = "auto"
+  [header.title]
+    logo = "/trees.svg"
+    name = "旷野之森"
+    # pre = "<i class='fa-solid fa-tree'></i>"
+    post   = ""
+    typeit = false
+  [header.subtitle]
+    name   = ""
+    typeit = false
+
+[breadcrumb]
+  enable   = false
+  sticky   = false
+  showHome = false
+
+[footer]
+  enable    = true
+  custom    = ""
+  hugo      = false
+  copyright = true
+  author    = true
+  since     = "2023"
+  wordCount = true
+  gov       = ""
+  icp       = "<a href='https://beian.miit.gov.cn/' target='_blank'>湘ICP备2023032380号</a>"
+  license   = ""
+  [footer.siteTime]
+    enable  = false
+    animate = true
+    icon    = "fa-solid fa-heartbeat"
+    pre     = ""
+    value   = ""
+  # FixIt 0.2.17 | NEW footer lines order, optional values: ["first", 0, 1, 2, 3, 4, 5, "last"]
+  [footer.order]
+    powered    = 0
+    copyright  = 1
+    statistics = 2
+    visitor    = 3
+    beian      = "last"
+
+[section]
+  paginate   = 20
+  dateFormat = "01-02"
+  rss        = 10
+  [section.recentlyUpdated]
+    enable   = false
+    rss      = false
+    days     = 30
+    maxCount = 10
+
+[list]
+  paginate   = 20
+  dateFormat = "01-02"
+  rss        = 10
+
+[tagcloud]
+  enable    = false
+  min       = 14     # Minimum font size in px
+  max       = 32     # Maximum font size in px
+  peakCount = 10     # Maximum count of posts per tag
+  orderby   = "name" # Order of tags, optional values: ["name", "count"]
+
+[home]
+  rss = 10
+  [home.profile]
+    enable        = true
+    gravatarEmail = ""
+    avatarURL     = "/images/avatar.png"
+    avatarMenu    = ""
+    title         = "weedien"
+    subtitle      = "喜欢摆烂、不务正业的程序员"
+    typeit        = true
+    social        = true
+    disclaimer    = ""
+  [home.posts]
+    enable   = true
+    paginate = 6
+
+[social]
+  GitHub = "weedien"
+  CSDN   = ""
+  Email  = "weedien@qq.com"
+  RSS    = false
+
+# FixIt 0.2.0 | CHANGED Page config
+[page]
+  authorAvatar       = true
+  hiddenFromHomePage = false
+  hiddenFromSearch   = false
+  hiddenFromRss      = false
+  twemoji            = false
+  lightgallery       = false
+  ruby               = true
+  fraction           = true
+  fontawesome        = true
+  # license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+  linkToMarkdown = false
+  rssFullText    = false
+  # FixIt 0.2.13 | NEW Page style ["narrow", "normal", "wide", ...]
+  pageStyle = "normal"
+  # If true, save the reading progress when closing the page.
+  autoBookmark = false
+  wordCount    = true
+  readingTime  = true
+  endFlag      = ""
+  instantPage  = false
+
+  [page.repost]
+    enable = false
+    url    = ""
+  [page.toc]
+    enable     = true
+    keepStatic = false
+    auto       = true
+    position   = "right"
+  [page.expirationReminder]
+    enable       = false
+    reminder     = 90
+    warning      = 180
+    closeComment = false
+  [page.math]
+    enable = true
+    # default inline delimiter is $ ... $ and \( ... \)
+    inlineLeftDelimiter  = ""
+    inlineRightDelimiter = ""
+    # default block delimiter is $$ ... $$, \[ ... \], \begin{equation} ... \end{equation} and some other functions
+    blockLeftDelimiter  = ""
+    blockRightDelimiter = ""
+    # KaTeX extension copy_tex
+    copyTex = true
+    # KaTeX extension mhchem
+    mhchem = true
+  [page.code]
+    copy          = true
+    edit          = false
+    maxShownLines = 20
+  [page.edit]
+    enable = false
+    # FixIt 0.2.15 | CHANGED Link for fork & edit
+    # url = "/edit/branch-name/subdirectory-name" # base on `gitRepo`
+    # url = "https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name" # full url
+    url = ""
+  # FixIt 0.2.0 | NEW Mapbox GL JS config (https://docs.mapbox.com/mapbox-gl-js)
+  [page.mapbox]
+    # access token of Mapbox GL JS
+    accessToken = ""
+    # style for the light theme
+    lightStyle = "mapbox://styles/mapbox/light-v9"
+    # style for the dark theme
+    darkStyle = "mapbox://styles/mapbox/dark-v9"
+    # whether to add NavigationControl
+    navigation = true
+    # whether to add GeolocateControl
+    geolocate = true
+    # whether to add ScaleControl
+    scale = true
+    # whether to add FullscreenControl
+    fullscreen = true
+  # FixIt 0.2.17 | NEW Donate (Sponsor) settings
+  [page.reward]
+    enable    = false
+    animation = false
+    # position relative to post footer, optional values: ["before", "after"]
+    position = "after"
+    # comment = "Buy me a coffee"
+    # FixIt 0.2.18 | NEW display mode of QR code images, optional values: ["static", "fixed"], default: `static`
+    mode = "static"
+    [page.reward.ways]
+      # wechatpay = "/images/wechatpay.png"
+      # alipay = "/images/alipay.png"
+      # paypal = "/images/paypal.png"
+      # bitcoin = "/images/bitcoin.png"
+
+[page.share]
+  enable = false
+# FixIt 0.2.15 | CHANGED Comment config
+[page.comment]
+  enable = true
+  [page.comment.giscus]
+    enable           = true
+    repo             = "weedien/blog"
+    repoId           = "R_kgDOK2XWaA"
+    category         = "Announcements"
+    categoryId       = "DIC_kwDOK2XWaM4Cbia5"
+    mapping          = "pathname"
+    strict           = "0"
+    term             = ""
+    reactionsEnabled = "1"
+    emitMetadata     = "0"
+    inputPosition    = "bottom"
+    lightTheme       = "light"
+    darkTheme        = "dark"
+    lazyLoad         = true
+
+[page.library]
+  [page.library.css]
+  # someCSS = "some.css"
+  # located in "assets/"
+  # Or
+  # someCSS = "https://cdn.example.com/some.css"
+  [page.library.js]
+# someJavascript = "some.js"
+# located in "assets/"
+# Or
+# someJavascript = "https://cdn.example.com/some.js"
+# FixIt 0.2.10 | CHANGED Page SEO config
+[page.seo]
+  # image URL
+  images = [  ]
+  # Publisher info
+  [page.seo.publisher]
+    name    = ""
+    logoUrl = ""
+
+[typeit]
+  speed       = 100
+  cursorSpeed = 1000
+  cursorChar  = "|"
+  duration    = -1
+  loop        = false
+
+[mermaid]
+  # For values, see https://mermaid.js.org/config/theming.html#available-themes
+  themes = [ "default", "dark" ]
+
+# FixIt 0.2.12 | NEW PanguJS config
+[pangu]
+  # For Chinese writing
+  enable   = false
+  selector = "article" # FixIt 0.2.17 | NEW
+
+# Detail config see https://github.com/Lruihao/watermark#readme
+[watermark]
+  enable = false
+  # watermark's text (HTML format is supported)
+  content = ""
+  # watermark's transparency
+  opacity = 0.1
+  # parent of watermark's container
+  appendTo = ".wrapper>main"
+  # watermark's width. unit: px
+  width = 150
+  # watermark's height. unit: px
+  height = 20
+  # row spacing of watermarks. unit: px
+  rowSpacing = 60
+  # col spacing of watermarks. unit: px
+  colSpacing = 30
+  # watermark's tangent angle. unit: deg
+  rotate = 15
+  # watermark's fontSize. unit: rem
+  fontSize = 0.85
+  # FixIt 0.2.13 | NEW watermark's fontFamily
+  fontFamily = "inherit"
+
+# FixIt 0.2.12 | NEW Busuanzi count
+[ibruce]
+  enable = true
+  # Enable in post meta
+  enablePost = true
+
+[verification]
+  google    = ""
+  bing      = ""
+  yandex    = ""
+  pinterest = ""
+  baidu     = ""
+  so        = ""
+  sogou     = ""
+
+[seo]
+  # image URL
+  image = ""
+  # thumbnail URL
+  thumbnailUrl = ""
+
+[analytics]
+  enable = false
+  # Google Analytics
+  [analytics.google]
+    id = ""
+    # whether to anonymize IP
+    anonymizeIP = true
+  # Fathom Analytics
+  [analytics.fathom]
+    id = ""
+    # server url for your tracker if you're self hosting
+    server = ""
+
+[cookieconsent]
+  enable = false
+  # text strings used for Cookie consent banner
+  [cookieconsent.content]
+    message = ""
+    dismiss = ""
+    link    = ""
+
+[cdn]
+  # CDN data file name, disabled by default ["jsdelivr.yml", "unpkg.yml", ...]
+  # located in "themes/FixIt/assets/data/cdn/" directory
+  # you can store your own data files in the same path under your project: "assets/data/cdn/"
+  data = ""
+
+[compatibility]
+  polyfill  = false
+  objectFit = false
+
+[githubCorner]
+  enable    = false
+  permalink = "https://github.com/weedien/blog"
+  title     = "View source on GitHub"
+  position  = "right"
+
+# FixIt 0.2.14 | NEW Gravatar config
+[gravatar]
+  # FixIt 0.2.18 | NEW Depends on the author's email, if the author's email is not set, the local avatar will be used
+  enable = false
+  # Gravatar host, default: "www.gravatar.com"
+  host  = "www.gravatar.com" # ["cn.gravatar.com", "gravatar.loli.net", ...]
+  style = ""                 # ["", "mp", "identicon", "monsterid", "wavatar", "retro", "blank", "robohash"]
+
+# FixIt 0.2.16 | NEW Back to top
+[backToTop]
+  enable = true
+  # Scroll percent label in b2t button
+  scrollpercent = true
+
+[readingProgress]
+  enable   = true
+  start    = "left"
+  position = "top"
+  reversed = false
+  light    = "green"
+  dark     = "orange"
+  height   = "3px"
+
+# FixIt 0.2.17 | NEW Progress bar in the top during page loading.
+# For more information: https://github.com/CodeByZach/pace
+[pace]
+  enable = true
+  # All available colors:
+  # ["black", "blue", "green", "orange", "pink", "purple", "red", "silver", "white", "yellow"]
+  color = "green"
+  # All available themes:
+  # ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",
+  # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
+  theme = "bounce"
+
+# FixIt 0.2.18-lts.3 | NEW [Experimental] cache remote images locally, see: https://github.com/hugo-fixit/FixIt/pull/362
+[cacheRemoteImages]
+  enable = false
+  # replace remote image url with local image url
+  replace = false
+
+# FixIt 0.2.17 | NEW Define custom file paths
+# Create your custom files in site directory `layouts/partials/custom` and uncomment needed files below
+[customFilePath]
+  # aside = "custom/aside.html"
+  # profile = "custom/profile.html"
+  # footer = "custom/footer.html"
+
+# FixIt 0.2.15 | NEW Developer options
+[dev]
+  enable = false
+  # Check for updates
+  c4u = false
+  # Please do not expose to public!
+  githubToken = ""
+  # Mobile Devtools config
+  [dev.mDevtools]
+    enable = false
+    # "vConsole", "eruda" supported
+    type = "vConsole"

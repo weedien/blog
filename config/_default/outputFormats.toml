@@ -1,0 +1,21 @@
+# -------------------------------------------------------------------------------------
+# Customizing Output Formats | 自定义输出格式
+# See: https://gohugo.io/templates/output-formats/#customizing-output-formats
+# -------------------------------------------------------------------------------------
+
+# Options to make output .md files
+[MarkDown]
+  mediaType   = "text/markdown"
+  isPlainText = true
+  isHTML      = false
+# FixIt 0.2.15 | NEW Options to make output baidu_urls.txt file
+[BaiduUrls]
+  baseName    = "baidu_urls"
+  mediaType   = "text/plain"
+  isPlainText = true
+  isHTML      = false
+[Algolia]
+  mediaType      = "application/json"
+  baseName       = "algolia"
+  isPlainText    = true
+  notAlternative = true

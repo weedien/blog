@@ -1,0 +1,43 @@
+# -------------------------------------------------------------------------------------
+# Hugo Configuration | Hugo 配置
+# See: https://gohugo.io/getting-started/configuration/
+# -------------------------------------------------------------------------------------
+
+# 网站标题
+title = "旷野之森"
+
+# 根目录的主机名（和路径）
+baseURL = "https://weedien.cn/blog/"
+
+# 主题
+theme = [ "FixIt" ]
+
+# 设置默认的语言 ["en", "zh-cn", "fr", "pl", ...]
+defaultContentLanguage = "zh-cn"
+
+# 网站语言，仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
+languageCode = "zh-CN"
+
+# 语言名称 ["English", "简体中文", "Français", "Polski", ...]
+languageName = "简体中文"
+
+# 是否包括中日韩文字
+hasCJKLanguage = true
+
+# 默认每页列表显示的文章数目
+paginate = 12
+
+# 版权描述，仅仅用于 SEO
+copyright = "weedien"
+
+# 是否使用 robots.txt
+enableRobotsTXT = true
+
+# 是否使用 git 信息
+enableGitInfo = true
+
+# 是否使用 emoji 代码
+enableEmoji = true
+
+# 忽略一些构建错误
+ignoreErrors = [ "error-remote-getjson", "error-missing-instagram-accesstoken" ]
